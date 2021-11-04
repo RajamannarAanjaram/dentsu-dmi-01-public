@@ -19,7 +19,7 @@ def lightning():
 @lightning.command()
 @click.argument("DATE_BEGIN")
 @click.argument("DATE_END")
-@click.option("--output", "-o", default=Path(str(os.getcwd()) + '/output/lightning_observation.csv'),
+@click.option("--output", "-o", default=Path(str(os.getcwd()) + '/lightning_observation.csv'),
               help="Path to output file; default: write to stdout")
 @click.option("--api-key", "-k",
               default=lambda: os.environ.get("DMI_API_KEY"),
